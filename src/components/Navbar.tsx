@@ -12,6 +12,9 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 
 	const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+	const desktopLinkClass =
+		"font-sans tracking-widest text-[0.6875rem] uppercase font-bold text-outline hover:text-primary border-b border-transparent hover:border-primary pb-1 transition-all";
+
 	return (
 		<nav className="fixed top-0 w-full h-16 z-50 glass-nav bg-surface/60 px-6 md:px-12 flex justify-between items-center gap-2 transition-colors">
 			<div className="hidden lg:block text-xl font-bold tracking-tighter text-on-surface font-headline">
@@ -29,28 +32,16 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 			</div>
 
 			<div className="hidden lg:flex items-center gap-8">
-				<a
-					href="#experience"
-					className="font-sans tracking-widest text-[0.6875rem] uppercase font-bold text-primary border-b border-primary pb-1 transition-all"
-				>
+				<a href="#experience" className={desktopLinkClass}>
 					{navbarContent.experience}
 				</a>
-				<a
-					href="#lab"
-					className="font-sans tracking-widest text-[0.6875rem] uppercase font-bold text-outline hover:text-on-surface transition-colors"
-				>
+				<a href="#lab" className={desktopLinkClass}>
 					{navbarContent.lab}
 				</a>
-				<a
-					href="#publications"
-					className="font-sans tracking-widest text-[0.6875rem] uppercase font-bold text-outline hover:text-on-surface transition-colors"
-				>
+				<a href="#publications" className={desktopLinkClass}>
 					{navbarContent.publications}
 				</a>
-				<a
-					href="#community"
-					className="font-sans tracking-widest text-[0.6875rem] uppercase font-bold text-outline hover:text-on-surface transition-colors"
-				>
+				<a href="#community" className={desktopLinkClass}>
 					{navbarContent.community}
 				</a>
 			</div>
@@ -94,7 +85,7 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 					<a
 						href="#experience"
 						onClick={toggleMenu}
-						className="font-sans tracking-widest text-xs uppercase font-bold text-on-surface hover:text-primary transition-colors"
+						className="font-sans tracking-widest text-xs uppercase font-bold text-outline hover:text-primary transition-colors"
 					>
 						{navbarContent.experience}
 					</a>
