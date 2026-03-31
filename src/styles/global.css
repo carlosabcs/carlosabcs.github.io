@@ -1,1 +1,96 @@
 @import "tailwindcss";
+
+@theme {
+	--radius-sm: 0px;
+	--radius-md: 0px;
+	--radius-lg: 0px;
+	--radius-xl: 0px;
+	--radius-2xl: 0px;
+	--radius-3xl: 0px;
+
+	--font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+
+	--color-surface: var(--color-surface);
+	--color-surface-container-lowest: var(--color-surface-container-lowest);
+	--color-surface-container-low: var(--color-surface-container-low);
+	--color-surface-container: var(--color-surface-container);
+	--color-surface-container-high: var(--color-surface-container-high);
+	--color-surface-container-highest: var(--color-surface-container-highest);
+
+	--color-on-surface: var(--color-on-surface);
+	--color-on-surface-variant: var(--color-on-surface-variant);
+
+	--color-primary: var(--color-primary);
+	--color-on-primary: var(--color-on-primary);
+	--color-primary-container: var(--color-primary-container);
+	--color-on-primary-container: var(--color-on-primary-container);
+
+	--color-outline: var(--color-outline);
+	--color-outline-variant: var(--color-outline-variant);
+}
+
+/* Light Mode (Default) */
+:root {
+	--color-surface: #f7f9fb;
+	--color-surface-container-lowest: #ffffff;
+	--color-surface-container-low: #f2f4f6;
+	--color-surface-container: #eceef0;
+	--color-surface-container-high: #e6e8ea;
+	--color-surface-container-highest: #e0e3e5;
+
+	--color-on-surface: #191c1e;
+	--color-on-surface-variant: #42474d;
+
+	--color-primary: #315372;
+	--color-on-primary: #ffffff;
+	--color-primary-container: #4a6b8c;
+	--color-on-primary-container: #ffffff;
+
+	--color-outline: #73777e;
+	--color-outline-variant: #c3c7ce;
+}
+
+/* Dark Mode */
+.dark {
+	--color-surface: #131315;
+	--color-surface-container-lowest: #0e0e10;
+	--color-surface-container-low: #1c1b1d;
+	--color-surface-container: #201f21;
+	--color-surface-container-high: #2a2a2c;
+	--color-surface-container-highest: #353437;
+
+	--color-on-surface: #e5e1e4;
+	--color-on-surface-variant: #c3c7ce;
+
+	--color-primary: #a8caef;
+	--color-on-primary: #0b3351;
+	--color-primary-container: #4a6b8c;
+	--color-on-primary-container: #d9eaff;
+
+	--color-outline: #8d9198;
+	--color-outline-variant: #42474d;
+}
+
+@layer utilities {
+	.glass-nav {
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+	}
+
+	.gradient-sheen {
+		background-image: linear-gradient(
+			135deg,
+			var(--color-primary),
+			var(--color-primary-container)
+		);
+	}
+}
+
+body {
+	background-color: var(--color-surface);
+	color: var(--color-on-surface);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}

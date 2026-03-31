@@ -1,17 +1,17 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Portfolio - Carlos Cordova">
+  <main class="min-h-screen flex items-center justify-center p-8">
+    <div class="p-12 bg-surface-container border border-outline-variant flex flex-col gap-6">
+      <h1 class="text-4xl font-headline font-bold text-on-surface">
+        Architectural Test
+      </h1>
+      <div class="w-32 h-32 bg-primary"></div>
+      <button class="bg-primary-container text-on-primary-container px-6 py-3 uppercase tracking-widest text-xs font-bold">
+        Test CTA
+      </button>
+    </div>
+  </main>
+</Layout>
