@@ -1,35 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ThemeToggle from './ThemeToggle';
+import Navbar from './Navbar';
 import { getI18n } from '../i18n/utils';
-import type { SupportedLangs } from '../i18n/types';
+import { SupportedLangs } from '../i18n/types';
 
 interface Props {
   lang: SupportedLangs;
 }
 
 const { lang } = Astro.props;
-const dict = getI18n(lang);
+const content = getI18n(lang);
 ---
 
 <Layout title="Carlos Cordova - Architect.OS" lang={lang}>
-  <main class="min-h-screen flex items-center justify-center p-8">
+  <Navbar client:load lang={lang} navbarContent={content.nav} />
+
+  <main class="min-h-screen flex items-center justify-center p-8 pt-24">
     <div class="p-12 bg-surface-container border border-outline-variant flex flex-col gap-6 items-start">
       <div class="flex items-center gap-4 w-full justify-between">
         <h1 class="text-4xl font-headline font-bold text-on-surface">
-          {dict.hero.title1}
+          {content.hero.title1}
         </h1>
-        <ThemeToggle client:load />
       </div>
       <p class="text-on-surface-variant max-w-md">
-        {dict.hero.description}
+        {content.hero.description}
       </p>
-      <div class="flex gap-4">
-        <button class="bg-primary-container text-on-primary-container px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:opacity-90">
-          {dict.hero.cvButton}
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button class="bg-primary-container text-on-primary-container px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:opacity-90 cursor-pointer">
+          {content.hero.cvButton}
         </button>
-        <button class="border border-outline-variant/30 text-on-surface px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:bg-surface-container-high">
-          {dict.hero.labButton}
+        <button class="border border-outline-variant/30 text-on-surface px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:bg-surface-container-high cursor-pointer">
+          {content.hero.labButton}
         </button>
       </div>
     </div>
