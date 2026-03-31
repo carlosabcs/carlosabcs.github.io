@@ -1,21 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ThemeToggle from '../components/ThemeToggle';
+import PortfolioContent from '../components/PortfolioContent.astro';
+import { SupportedLangs } from '../i18n/types';
 ---
 
-<Layout title="Portfolio - Carlos Cordova" lang="en">
-  <main class="min-h-screen flex items-center justify-center p-8">
-    <div class="p-12 bg-surface-container border border-outline-variant flex flex-col gap-6 items-start">
-      <div class="flex items-center gap-4 w-full justify-between">
-        <h1 class="text-4xl font-headline font-bold text-on-surface">
-          Architectural Test
-        </h1>
-        <ThemeToggle client:load />
-      </div>
-      <div class="w-32 h-32 bg-primary"></div>
-      <button class="bg-primary-container text-on-primary-container px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:opacity-90">
-        Test CTA
-      </button>
-    </div>
-  </main>
-</Layout>
+<PortfolioContent lang={SupportedLangs.EN} />

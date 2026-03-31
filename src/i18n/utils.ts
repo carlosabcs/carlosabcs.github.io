@@ -5,5 +5,6 @@ import { SupportedLangs, type PortfolioData } from "./types";
 export const defaultLang = SupportedLangs.ES;
 
 export function getI18n(lang: SupportedLangs): PortfolioData {
+	console.log({ lang });
 	return lang === SupportedLangs.ES ? es : en;
 }
