@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from './Navbar';
 import Experience from './Experience.astro';
+import Lab from './Lab.astro';
 import { getI18n } from '../i18n/utils';
 import type { SupportedLangs } from '../i18n/types';
 
@@ -42,5 +43,7 @@ const content = getI18n(lang);
   </main>
 
   <Experience experienceContent={content.experience} />
+  
+  <Lab labContent={content.lab} />
 
 </Layout>
