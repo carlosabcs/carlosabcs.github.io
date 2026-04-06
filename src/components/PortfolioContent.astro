@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from './Navbar';
+import Experience from './Experience.astro';
 import { getI18n } from '../i18n/utils';
-import { SupportedLangs } from '../i18n/types';
+import type { SupportedLangs } from '../i18n/types';
 
 interface Props {
   lang: SupportedLangs;
@@ -15,24 +16,31 @@ const content = getI18n(lang);
 <Layout title="Carlos Cordova - Architect.OS" lang={lang}>
   <Navbar client:load lang={lang} navbarContent={content.nav} />
 
-  <main class="min-h-screen flex items-center justify-center p-8 pt-24">
-    <div class="p-12 bg-surface-container border border-outline-variant flex flex-col gap-6 items-start">
-      <div class="flex items-center gap-4 w-full justify-between">
-        <h1 class="text-4xl font-headline font-bold text-on-surface">
-          {content.hero.title1}
-        </h1>
-      </div>
-      <p class="text-on-surface-variant max-w-md">
+  <main class="min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16">
+    <div class="max-w-5xl">
+      <span class="text-primary font-bold tracking-[0.2em] uppercase text-[0.6875rem] mb-6 block">
+        {content.hero.location}
+      </span>
+      <h1 class="text-[3.5rem] md:text-[5rem] leading-[1.1] font-extrabold tracking-tighter mb-8 font-headline text-on-surface">
+        {content.hero.title1} <br/>
+        <span class="text-transparent bg-clip-text gradient-sheen">
+          {content.hero.title2}
+        </span>
+      </h1>
+      <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
         {content.hero.description}
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <button class="bg-primary-container text-on-primary-container px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:opacity-90 cursor-pointer">
+      <div class="flex flex-col md:flex-row gap-4">
+        <button class="gradient-sheen text-on-primary-container font-bold px-8 py-4 uppercase tracking-widest text-[0.75rem] hover:opacity-90 transition-opacity cursor-pointer">
           {content.hero.cvButton}
         </button>
-        <button class="border border-outline-variant/30 text-on-surface px-6 py-3 uppercase tracking-widest text-xs font-bold transition-all hover:bg-surface-container-high cursor-pointer">
+        <button class="border border-outline-variant/30 text-on-surface font-bold px-8 py-4 uppercase tracking-widest text-[0.75rem] hover:bg-surface-container-high transition-colors cursor-pointer">
           {content.hero.labButton}
         </button>
       </div>
     </div>
   </main>
+
+  <Experience experienceContent={content.experience} />
+
 </Layout>

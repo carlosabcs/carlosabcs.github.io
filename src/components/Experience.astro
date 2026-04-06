@@ -1,0 +1,65 @@
+---
+import type { PortfolioData } from '../i18n/types';
+
+interface Props {
+  experienceContent: PortfolioData['experience'];
+}
+
+const { experienceContent } = Astro.props;
+---
+
+<section class="py-32 px-6 md:px-12 bg-surface-container-low" id="experience">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-20">
+      <h2 class="text-[0.6875rem] uppercase tracking-[0.3em] font-bold text-primary mb-4">
+        {experienceContent.sectionTitle}
+      </h2>
+      <h3 class="text-3xl font-bold font-headline text-on-surface">
+        {experienceContent.header}
+      </h3>
+    </div>
+
+    <div class="space-y-24 border-l border-outline-variant/20 ml-4 md:ml-0">
+      {experienceContent.roles.map((role, index) => (
+        <div class="relative pl-12 group">
+          <div class={`absolute left-[-5px] top-0 w-[10px] h-[10px] transition-colors duration-300 ${index === 0 ? 'bg-primary' : 'bg-outline group-hover:bg-primary/70'}`}></div>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-6">
+            <h4 class="text-2xl font-bold text-on-surface">
+              {role.title} <span class="text-primary font-light">@ {role.company}</span>
+            </h4>
+            <span class="text-[0.6875rem] uppercase font-mono text-outline tracking-widest mt-2 md:mt-0">
+              {role.period}
+            </span>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 space-y-6">
+              <p class="text-on-surface-variant leading-relaxed">
+                {role.description}
+              </p>
+              <ul class="flex flex-wrap gap-2">
+                {role.tech.map((tech) => (
+                  <li class="px-3 py-1 bg-surface-container-high text-[0.625rem] font-bold uppercase tracking-widest border border-outline-variant/20 text-on-surface">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              {role.metrics.map((metric) => (
+                <div class="p-6 bg-surface-container-high/50 border-l border-primary/50 hover:border-primary transition-colors">
+                  <div class="text-2xl font-bold text-primary mb-1">{metric.value}</div>
+                  <div class="text-[0.625rem] uppercase tracking-tighter text-outline">
+                    {metric.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
