@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from './Navbar';
 import Experience from './Experience.astro';
 import Lab from './Lab.astro';
+import Publications from './Publications.astro';
+import Community from './Community.astro';
 import { getI18n } from '../i18n/utils';
 import type { SupportedLangs } from '../i18n/types';
 
@@ -14,7 +16,7 @@ const { lang } = Astro.props;
 const content = getI18n(lang);
 ---
 
-<Layout title="Carlos Cordova - Architect.OS" lang={lang}>
+<Layout title={content.meta.title} lang={lang}>
   <Navbar client:load lang={lang} navbarContent={content.nav} />
 
   <main class="min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16">
@@ -43,7 +45,24 @@ const content = getI18n(lang);
   </main>
 
   <Experience experienceContent={content.experience} />
-  
   <Lab labContent={content.lab} />
+  <Publications publicationsContent={content.publications} />
+  <Community communityContent={content.community} />
 
+  <footer class="bg-surface-container-lowest w-full py-20 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 gap-8">
+    <div class="text-on-surface font-headline font-bold text-lg tracking-tighter">
+      {content.footer.logo}
+    </div>
+    <div class="text-outline font-sans text-[0.625rem] tracking-widest uppercase">
+      © {new Date().getFullYear()} {content.footer.copyright}
+    </div>
+    <div class="flex gap-8">
+      <a href={content.footer.githubUrl} target="_blank" rel="noopener noreferrer" class="font-sans text-[0.6875rem] tracking-widest uppercase text-outline hover:text-primary transition-colors">
+        {content.footer.githubText}
+      </a>
+      <a href={content.footer.linkedinUrl} target="_blank" rel="noopener noreferrer" class="font-sans text-[0.6875rem] tracking-widest uppercase text-outline hover:text-primary transition-colors">
+        {content.footer.linkedinText}
+      </a>
+    </div>
+  </footer>
 </Layout>

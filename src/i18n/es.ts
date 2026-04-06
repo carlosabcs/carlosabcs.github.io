@@ -11,6 +11,17 @@ export const es: PortfolioData = {
 		community: "Comunidad",
 		connect: "Conectar",
 	},
+	meta: {
+		title: "Carlos Cordova - Software Engineer",
+	},
+	footer: {
+		logo: "Carlos Cordova",
+		copyright: "TODOS LOS DERECHOS RESERVADOS.",
+		githubText: "Github",
+		githubUrl: "https://github.com/carlosabcs",
+		linkedinText: "LinkedIn",
+		linkedinUrl: "https://linkedin.com/in/carlosabcs",
+	},
 	hero: {
 		location: "BASADO EN LIMA, PERÚ / REMOTO",
 		title1: "Construyo sistemas resilientes para",

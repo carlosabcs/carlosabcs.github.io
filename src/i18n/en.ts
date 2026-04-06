@@ -2,7 +2,7 @@ import type { PortfolioData } from "./types";
 
 export const en: PortfolioData = {
 	nav: {
-    carlosCordova: "Carlos Cordova",
+		carlosCordova: "Carlos Cordova",
 		acronym: "C.C. //",
 		positionTitle: "Software Engineer",
 		experience: "Experience",
@@ -10,6 +10,17 @@ export const en: PortfolioData = {
 		publications: "Publications",
 		community: "Community",
 		connect: "Connect",
+	},
+	meta: {
+		title: "Carlos Cordova - Software Engineer",
+	},
+	footer: {
+		logo: "Carlos Cordova",
+		copyright: "ALL RIGHTS RESERVED.",
+		githubText: "Github",
+		githubUrl: "https://github.com/carlosabcs",
+		linkedinText: "LinkedIn",
+		linkedinUrl: "https://linkedin.com/in/carlosabcs",
 	},
 	hero: {
 		location: "BASED IN LIMA, PERU / REMOTE",

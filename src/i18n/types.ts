@@ -43,6 +43,9 @@ export interface CommunityRole {
 }
 
 export interface PortfolioData {
+	meta: {
+		title: string;
+	};
 	nav: {
 		carlosCordova: string;
 		acronym: string;
@@ -80,5 +83,13 @@ export interface PortfolioData {
 		sectionTitle: string;
 		header: string;
 		items: CommunityRole[];
+	};
+	footer: {
+		logo: string;
+		copyright: string;
+		githubText: string;
+		githubUrl: string;
+		linkedinText: string;
+		linkedinUrl: string;
 	};
 }
