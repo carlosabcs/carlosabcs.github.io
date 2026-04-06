@@ -44,6 +44,9 @@ export interface CommunityRole {
 
 export interface PortfolioData {
 	nav: {
+		carlosCordova: string;
+		acronym: string;
+		positionTitle: string;
 		experience: string;
 		lab: string;
 		publications: string;

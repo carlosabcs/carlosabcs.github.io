@@ -2,6 +2,9 @@ import type { PortfolioData } from "./types";
 
 export const es: PortfolioData = {
 	nav: {
+		carlosCordova: "Carlos Cordova",
+		acronym: "C.C. //",
+		positionTitle: "Software Engineer",
 		experience: "Experiencia",
 		lab: "Laboratorio",
 		publications: "Publicaciones",
