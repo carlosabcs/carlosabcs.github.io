@@ -120,23 +120,54 @@ export const en: PortfolioData = {
 		header: "Academic Publications",
 		items: [
 			{
-				conference: "Proceedings of the International AAAI Conference",
-				year: "2022",
+				conference: "Knowledge and Information Systems",
+				year: "2024",
 				title:
-					"Analysis of the influence of political polarization in the vaccination stance",
+					"Understanding stance classification of BERT models: an attention-based framework",
 				description:
-					"Research on the Brazilian COVID-19 scenario utilizing advanced data mining and classification techniques.",
-				linkText: "Read Paper",
-				url: "#",
+					"An attention-based interpretability framework to identify the most influential words for stance classification using BERT-based models, assessing performance across multiple datasets and languages.",
+				linkText: "Read paper",
+				url: "https://link.springer.com/article/10.1007/s10115-023-01962-y",
 			},
 			{
-				conference: "Anais Do Simpósio Brasileiro de Banco de Dados (SBBD)",
-				year: "2021",
-				title: "Interpreting BERT-based stance classification",
+				conference: "AAAI ICWSM",
+				year: "2022",
+				title:
+					"Analysis of the influence of political polarization in the vaccination stance: the Brazilian COVID-19 scenario",
 				description:
-					"A case study about the Brazilian COVID vaccination focusing on NLP and Transformer models.",
-				linkText: "Read Paper",
-				url: "#",
+					"Research leveraging advanced data mining to analyze political polarization and its effect on vaccination behaviors during the pandemic using social media data.",
+				linkText: "Read paper",
+				url: "https://ojs.aaai.org/index.php/ICWSM/article/view/19281",
+			},
+			{
+				conference: "Simpósio Brasileiro de Banco de Dados (SBBD)",
+				year: "2021",
+				title:
+					"Interpreting BERT-based stance classification: a case study about the Brazilian COVID vaccination",
+				description:
+					"An interpretability study focusing on Natural Language Processing and Transformer models applied to public health stance classification.",
+				linkText: "Read paper",
+				url: "https://sol.sbc.org.br/index.php/sbbd/article/view/17867",
+			},
+			{
+				conference: "Journal of Information and Data Management",
+				year: "2021",
+				title:
+					"Assessing the combination of DistilBERT news representations and difusion topological features to classify fake news",
+				description:
+					"A novel approach combining compact language models (DistilBERT) with network topology features for enhanced fake news detection on social media.",
+				linkText: "Read paper",
+				url: "https://journals-sol.sbc.org.br/index.php/jidm/article/view/1895",
+			},
+			{
+				conference: "IEEE/WIC/ACM WI-IAT",
+				year: "2020",
+				title:
+					"Quarenteners vs. Chloroquiners: A framework to analyze how political polarization affects the behavior of groups",
+				description:
+					"A computational framework designed to measure the impact of political extremes on social distancing compliance using large-scale social data.",
+				linkText: "Read paper",
+				url: "https://ieeexplore.ieee.org/abstract/document/9457781",
 			},
 		],
 	},
