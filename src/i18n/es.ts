@@ -36,42 +36,57 @@ export const es: PortfolioData = {
 	},
 	experience: {
 		sectionTitle: "Trayectoria Profesional",
-		header: "Impacto Técnico",
+		header: "Experiencia en Ingeniería",
 		roles: [
 			{
 				title: "Frontend Web Developer",
 				company: "Globant (Qiddiya)",
-				period: "05/2024 — PRESENTE",
+				companyUrl: "https://omegaup.com/",
+				period: "05/2024 — 03/2026",
 				description:
-					"Desarrollo y optimización de funcionalidades clave con SvelteKit y TypeScript. Creación de más de 40 componentes reutilizables (WCAG 2.1 AA) desde prototipos en Figma para el sistema de diseño.",
-				tech: ["SvelteKit", "TypeScript", "GraphQL"],
+					"Desarrollé UI features utilizando SvelteKit y TypeScript. Convertí prototipos de Figma en un sistema de diseño con más de 60 componentes, cumpliendo con los estándares de Accesibilidad WCAG 2.1 AA. Integré endpoints REST y GraphQL, y programé un calendario dual (Gregoriano/Hijri) para flujos de localización. Manejé animaciones con Lottie.",
+				tech: ["Svelte", "SvelteKit", "TypeScript", "GraphQL", "Vitest"],
 				metrics: [
-					{ value: "≥95", label: "Puntuación A11Y" },
-					{ value: "50+", label: "Bugs Resueltos" },
+					{ value: "≥95", label: "Score de A11y" },
+					{ value: "60+", label: "Componentes UI" },
 				],
 			},
 			{
 				title: "Full Stack Software Engineer",
 				company: "Globant (Google PSO)",
+				companyUrl: "https://omegaup.com/",
 				period: "02/2022 — 04/2024",
 				description:
-					"Desarrollo y evolución de PSO Launchpad usando React.js y TypeScript, enfocado en una arquitectura de UI escalable y mantenible.",
-				tech: ["React", "Express.js", "GCP"],
+					"Mantuve y optimicé la plataforma PSO Launchpad usando React y TypeScript. Construí módulos de backend en Express.js para estimación de oportunidades. Implementé una cronjob de sincronización de datos bajo demanda que redujo las actualizaciones manuales a la mitad. Optimicé los pipelines de CI/CD usando GCP para acelerar pases a producción.",
+				tech: ["React", "Express.js", "GCP", "TypeScript"],
 				metrics: [
-					{ value: "200%", label: "Aumento de Escalabilidad" },
-					{ value: "8 min", label: "Tiempo de Deploy (de 30m)" },
+					{ value: "8 min", label: "Tiempo de Deploy" },
+					{ value: "50%", label: "Menos Syncs Manuales" },
 				],
 			},
 			{
 				title: "Full Stack Software Engineer",
 				company: "omegaUp",
+				companyUrl: "https://omegaup.com/",
 				period: "06/2019 — 01/2022",
 				description:
-					"Diseño y mantenimiento de sistemas de notificaciones y medallas con Vue.js, TypeScript, Python y PHP para una plataforma de más de 200,000 usuarios activos anuales.",
-				tech: ["Vue.js", "Python", "PHP"],
+					"Diseñé los sistemas de Notificaciones e Insignias para la plataforma de programación competitiva open-source. Escribí el algoritmo de ranking de escuelas y configuré cronjobs para la agregación diaria de datos. Diseñé e implementé documentos de diseño técnico para planificar arquitectura y escalabilidad de nuevas características.",
+				tech: ["Vue.js", "Python", "PHP", "Docker", "TypeScript", "MySQL"],
 				metrics: [
-					{ value: "200k+", label: "Usuarios Activos Anuales" },
-					{ value: "5", label: "Mejoras Mayores" },
+					{ value: "200k+", label: "Usuarios Anuales" },
+					{ value: "8+", label: "Proyetos propios" },
+				],
+			},
+			{
+				title: "Full Stack Software Engineer",
+				company: "Tera Soluciones Digitales",
+				period: "08/2018 — 05/2019",
+				description:
+					"Desarrollé 'Urbano', una aplicación de rastreo de transporte público en tiempo real. Configuré la comunicación TCP con hardware GPS usando Node.js y gestioné el flujo de datos con Express y MongoDB. También construí un dashboard de gestión de almacenes ('Sysfarma') usando Laravel y Vue.js.",
+				tech: ["Node.js", "MongoDB", "Vue.js", "Laravel"],
+				metrics: [
+					{ value: "100+", label: "Usuarios Concurrentes" },
+					{ value: "2", label: "Productos Lanzados" },
 				],
 			},
 		],

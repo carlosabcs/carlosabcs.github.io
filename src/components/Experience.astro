@@ -21,19 +21,38 @@ const { experienceContent } = Astro.props;
 
     <div class="space-y-24 border-l border-outline-variant/20 ml-4 md:ml-0">
       {experienceContent.roles.map((role, index) => (
-        <div class="relative pl-12 group">
-          <div class={`absolute left-[-5px] top-0 w-[10px] h-[10px] transition-colors duration-300 ${index === 0 ? 'bg-primary' : 'bg-outline group-hover:bg-primary/70'}`}></div>
+        <div class="relative pl-6 md:pl-12 group">
+          <div class={`absolute -left-1.25 top-0 w-2.5 h-2.5 transition-colors duration-300 ${index === 0 ? 'bg-primary' : 'bg-outline group-hover:bg-primary/70'}`}></div>
           
-          <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-6">
-            <h4 class="text-2xl font-bold text-on-surface">
-              {role.title} <span class="text-primary font-light">@ {role.company}</span>
-            </h4>
-            <span class="text-[0.6875rem] uppercase font-mono text-outline tracking-widest mt-2 md:mt-0">
-              {role.period}
-            </span>
+          <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 gap-4">
+            <div>
+              <h4 class="text-2xl font-bold text-on-surface flex flex-wrap items-center gap-2">
+                <span>{role.title}</span>
+                <span class="text-outline font-light">@</span>
+                {role.companyUrl ? (
+                  <a 
+                    href={role.companyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="text-primary hover:text-primary-container hover:underline underline-offset-4 decoration-1 transition-all"
+                  >
+                    {role.company}
+                  </a>
+                ) : (
+                  <span class="text-primary">{role.company}</span>
+                )}
+              </h4>
+            </div>
+            
+            {/* Emphasized Date Badge */}
+            <div class="shrink-0 mt-1 md:mt-0">
+              <span class="inline-block px-3 py-1.5 bg-surface-container-highest border border-outline-variant/30 text-[0.6875rem] uppercase font-mono text-on-surface tracking-widest font-bold">
+                {role.period}
+              </span>
+            </div>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-12">
+          <div class="grid md:grid-cols-3 gap-12 mt-6">
             <div class="md:col-span-2 space-y-6">
               <p class="text-on-surface-variant leading-relaxed">
                 {role.description}
@@ -47,7 +66,7 @@ const { experienceContent } = Astro.props;
               </ul>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 items-center gap-4">
               {role.metrics.map((metric) => (
                 <div class="p-6 bg-surface-container-high/50 border-l border-primary/50 hover:border-primary transition-colors">
                   <div class="text-2xl font-bold text-primary mb-1">{metric.value}</div>
