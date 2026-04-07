@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 import { SupportedLangs, type PortfolioData } from "../i18n/types";
@@ -10,8 +10,27 @@ interface NavbarProps {
 
 export default function Navbar({ lang, navbarContent }: NavbarProps) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isConnectOpen, setIsConnectOpen] = useState(false);
+	const connectMenuRef = useRef<HTMLDivElement>(null);
 
 	const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+	const toggleConnect = () => setIsConnectOpen(!isConnectOpen);
+
+	const whatsappUrl = "https://wa.me/51973851600";
+	const emailUrl = "mailto:carlosab1802@gmail.com";
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				connectMenuRef.current &&
+				!connectMenuRef.current.contains(event.target as Node)
+			) {
+				setIsConnectOpen(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => document.removeEventListener("mousedown", handleClickOutside);
+	}, []);
 
 	const handleScroll = (
 		e: React.MouseEvent<HTMLAnchorElement>,
@@ -20,7 +39,7 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 		e.preventDefault();
 		const target = document.getElementById(targetId);
 		if (target) {
-			const offset = 64; // 4rem (h-16) to account for fixed navbar
+			const offset = 64;
 			const elementPosition = target.getBoundingClientRect().top;
 			const offsetPosition = elementPosition + window.scrollY - offset;
 
@@ -103,9 +122,47 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 
 				<ThemeToggle />
 
-				<button className="hidden md:block border border-outline-variant/30 text-on-surface px-6 py-2 uppercase tracking-widest text-[0.625rem] font-bold hover:bg-surface-container-high transition-colors duration-300">
-					{navbarContent.connect}
-				</button>
+				<div className="hidden md:block relative" ref={connectMenuRef}>
+					<button
+						onClick={toggleConnect}
+						className={`border text-on-surface px-6 py-2 uppercase tracking-widest text-[0.625rem] font-bold transition-colors duration-300 cursor-pointer ${isConnectOpen ? "border-primary bg-surface-container-high" : "border-outline-variant/30 hover:bg-surface-container-high"}`}
+					>
+						{navbarContent.connect}
+					</button>
+
+					<AnimatePresence>
+						{isConnectOpen && (
+							<motion.div
+								initial={{ opacity: 0, y: 10 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: 10 }}
+								transition={{ duration: 0.2 }}
+								className="absolute right-0 mt-2 w-48 bg-surface-container border border-outline-variant/20 shadow-2xl flex flex-col"
+							>
+								<a
+									href={emailUrl}
+									className="px-6 py-4 text-xs font-bold font-sans uppercase tracking-widest text-outline hover:text-primary hover:bg-surface-container-high transition-colors flex items-center gap-3 border-b border-outline-variant/10"
+								>
+									<span className="material-symbols-outlined text-lg">
+										mail
+									</span>
+									{navbarContent.emailText}
+								</a>
+								<a
+									href={whatsappUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="px-6 py-4 text-xs font-bold font-sans uppercase tracking-widest text-outline hover:text-primary hover:bg-surface-container-high transition-colors flex items-center gap-3"
+								>
+									<span className="material-symbols-outlined text-lg">
+										phone
+									</span>
+									{navbarContent.whatsappText}
+								</a>
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</div>
 
 				<button
 					className="lg:hidden text-on-surface flex items-center justify-center cursor-pointer transition-transform duration-300 active:scale-90"
@@ -161,9 +218,28 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 						>
 							{navbarContent.community}
 						</a>
-						<button className="border border-outline-variant/30 text-on-surface px-6 py-4 uppercase tracking-widest text-[0.625rem] font-bold hover:bg-surface-container-high transition-colors duration-300 w-full text-left mt-4 cursor-pointer">
-							{navbarContent.connect}
-						</button>
+
+						<div className="border-t border-outline-variant/20 pt-6 mt-2 flex flex-col gap-4">
+							<span className="text-[0.625rem] font-bold uppercase tracking-widest text-outline-variant">
+								{navbarContent.connect}
+							</span>
+							<a
+								href={emailUrl}
+								className="font-sans tracking-widest text-xs uppercase font-bold text-on-surface hover:text-primary transition-colors flex items-center gap-3"
+							>
+								<span className="material-symbols-outlined">mail</span>{" "}
+								{navbarContent.emailText}
+							</a>
+							<a
+								href={whatsappUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="font-sans tracking-widest text-xs uppercase font-bold text-on-surface hover:text-primary transition-colors flex items-center gap-3"
+							>
+								<span className="material-symbols-outlined">chat</span>{" "}
+								{navbarContent.whatsappText}
+							</a>
+						</div>
 					</motion.div>
 				)}
 			</AnimatePresence>

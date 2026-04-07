@@ -10,6 +10,18 @@ export const es: PortfolioData = {
 		publications: "Publicaciones",
 		community: "Comunidad",
 		connect: "Conectar",
+		whatsappText: "WhatsApp",
+		emailText: "Email",
+	},
+	hero: {
+		location: "PERÚ / REMOTO",
+		title1: "Creando soluciones web",
+		title2: "con precisión inquebrantable.",
+		description:
+			"Senior Full-Stack Engineer con más de 6 años de experiencia. Especializado en React, Svelte y TypeScript, con una sólida base en backend. Construyo sistemas resilientes de extremo a extremo que escalan sin esfuerzo, transformando requerimientos complejos en soluciones robustas y altamente accesibles.",
+		cvButton: "Descargar CV",
+		cvLink: "/Resume_Carlos_Cordova.pdf",
+		labButton: "Ver Laboratorio Técnico",
 	},
 	meta: {
 		title: "Carlos Cordova - Software Engineer",
@@ -21,15 +33,6 @@ export const es: PortfolioData = {
 		githubUrl: "https://github.com/carlosabcs",
 		linkedinText: "LinkedIn",
 		linkedinUrl: "https://linkedin.com/in/carlosabcs",
-	},
-	hero: {
-		location: "BASADO EN LIMA, PERÚ / REMOTO",
-		title1: "Construyo sistemas resilientes para",
-		title2: "problemas complejos.",
-		description:
-			"Senior Frontend Engineer con más de 6 años de experiencia desarrollando y escalando aplicaciones web para audiencias de más de 50,000 usuarios. Especializado en React.js, Svelte y TypeScript.",
-		cvButton: "Descargar CV",
-		labButton: "Ver Laboratorio Técnico",
 	},
 	experience: {
 		sectionTitle: "Trayectoria Profesional",

@@ -55,6 +55,8 @@ export interface PortfolioData {
 		publications: string;
 		community: string;
 		connect: string;
+		whatsappText: string;
+		emailText: string;
 	};
 	hero: {
 		location: string;
@@ -62,6 +64,7 @@ export interface PortfolioData {
 		title2: string;
 		description: string;
 		cvButton: string;
+		cvLink: string;
 		labButton: string;
 	};
 	experience: {
