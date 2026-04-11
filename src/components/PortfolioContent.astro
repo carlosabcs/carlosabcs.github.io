@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from './Navbar';
 import Experience from './Experience.astro';
-import Lab from './Lab.astro';
+// import Lab from './Lab.astro';
 import Publications from './Publications.astro';
 import Community from './Community.astro';
 import { getI18n } from '../i18n/utils';
@@ -42,18 +42,20 @@ const content = getI18n(lang);
         >
           {content.hero.cvButton}
         </a>
+        {/* Lab button hidden for v1
         <a 
           href="#lab" 
           class="flex items-center justify-center border border-outline-variant/30 text-on-surface font-bold px-8 py-4 uppercase tracking-widest text-[0.75rem] hover:bg-surface-container-high transition-colors cursor-pointer text-center"
         >
           {content.hero.labButton}
         </a>
+        */}
       </div>
     </div>
   </main>
 
   <Experience experienceContent={content.experience} />
-  <Lab labContent={content.lab} />
+  {/* <Lab labContent={content.lab} /> */}
   <Publications publicationsContent={content.publications} />
   <Community communityContent={content.community} />
 

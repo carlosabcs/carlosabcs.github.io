@@ -9,8 +9,8 @@ const { communityContent } = Astro.props;
 ---
 
 <section class="py-32 px-6 md:px-12 bg-surface" id="community">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-20">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-20 text-center">
       <h2 class="text-[0.6875rem] uppercase tracking-[0.3em] font-bold text-primary mb-4">
         {communityContent.sectionTitle}
       </h2>
@@ -19,7 +19,7 @@ const { communityContent } = Astro.props;
       </h3>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {communityContent.items.map((item, index) => (
         <div class={`bg-surface-container-low p-8 border-l-2 group hover:bg-surface-container-high transition-all ${index % 2 === 0 ? 'border-primary' : 'border-outline'}`}>
           <div class="flex items-center gap-3 mb-6">
@@ -33,7 +33,7 @@ const { communityContent } = Astro.props;
           <h4 class="font-bold text-lg mb-2 text-on-surface">
             {item.title}
           </h4>
-          <p class="text-on-surface-variant text-xs leading-relaxed">
+          <p class="text-on-surface-variant text-sm leading-relaxed">
             {item.description}
           </p>
         </div>

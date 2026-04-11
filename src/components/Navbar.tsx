@@ -197,13 +197,14 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 						>
 							{navbarContent.experience}
 						</a>
+						{/* Hidden for v1
 						<a
 							href="#lab"
 							onClick={(e) => handleScroll(e, "lab")}
 							className="font-sans tracking-widest text-xs uppercase font-bold text-outline hover:text-primary transition-colors duration-300"
 						>
 							{navbarContent.lab}
-						</a>
+						</a> */}
 						<a
 							href="#publications"
 							onClick={(e) => handleScroll(e, "publications")}
