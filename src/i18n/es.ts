@@ -177,24 +177,31 @@ export const es: PortfolioData = {
 		items: [
 			{
 				icon: "diversity_3",
-				category: "Mentoría GSoC",
-				title: "Mentor de Proyecto (3x)",
+				category: "Mentoría Open Source",
+				title: "Google Summer of Code (3x)",
 				description:
-					"Mentor para Google Summer of Code con omegaUp (2022-2024), logrando 100% de finalización de proyectos y 2 pasantías a tiempo completo.",
+					"Fui mentor de tres pasantes para omegaUp en el GSoC durante tres años consecutivos (2022-2024), logrando el 100% de finalización de proyectos y facilitando dos contrataciones para la organización.",
+			},
+			{
+				icon: "military_tech",
+				category: "Honores Universitarios",
+				title: "Primer Puesto de Promoción",
+				description:
+					"Graduado en el primer puesto de la promoción 2018 de la carrera de Informática (Ciencias de la Computación) en la Universidad Nacional de Trujillo, demostrando excelencia académica constante.",
 			},
 			{
 				icon: "workspace_premium",
-				category: "Reconocimiento",
-				title: "Premios a Mejores Artículos",
+				category: "Excelencia Académica",
+				title: "Investigación Premiada",
 				description:
-					"Premio al Mejor Artículo en el Simposio KDMiLe 2020 y Subcampeón al Mejor Artículo de Estudiante en IEEE/WIC/ACM WI-IAT 2021.",
+					"Recibí el Premio al Mejor Artículo en el Simposio KDMiLe 2020 y el 2do Puesto al Mejor Artículo de Estudiante en la conferencia internacional IEEE/WIC/ACM WI-IAT 2021.",
 			},
 			{
 				icon: "school",
-				category: "CodeLabs 2020",
-				title: "Mentor de Pasantes",
+				category: "Liderazgo en Ingeniería",
+				title: "Mentor en CodeLabs 2020",
 				description:
-					"Mentor de tres pasantes, fomentando el desarrollo de habilidades y las contribuciones a proyectos de código abierto.",
+					"Guié a tres pasantes de ingeniería de software en sus primeras contribuciones open-source, fomentando el desarrollo de habilidades técnicas y el trabajo colaborativo.",
 			},
 		],
 	},

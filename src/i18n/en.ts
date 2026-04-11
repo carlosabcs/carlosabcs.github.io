@@ -177,24 +177,31 @@ export const en: PortfolioData = {
 		items: [
 			{
 				icon: "diversity_3",
-				category: "GSoC Mentorship",
-				title: "3x Project Mentor",
+				category: "Open Source Mentorship",
+				title: "Google Summer of Code (3x)",
 				description:
-					"Mentored for Google Summer of Code with omegaUp (2022-2024), achieving 100% project completion and 2 full-time internships.",
+					"Mentored three different interns for omegaUp across three consecutive years (2022-2024), achieving 100% project completion and facilitating two full-time engineering hires for the organization.",
+			},
+			{
+				icon: "military_tech",
+				category: "University Honors",
+				title: "Best Student Award, Class of 2018",
+				description:
+					"Graduated first in the Computer Science (Informática) class of 2018 at the National University of Trujillo, demonstrating consistent academic excellence and technical mastery.",
 			},
 			{
 				icon: "workspace_premium",
-				category: "Recognition",
-				title: "Best Paper Awards",
+				category: "Academic Excellence",
+				title: "Award-Winning Research",
 				description:
-					"Best Paper Award at KDMiLe Symposium 2020 and Best Student Paper Runner-Up at IEEE/WIC/ACM WI-IAT 2021.",
+					"Received the Best Paper Award at the KDMiLe Symposium 2020 and the Best Student Paper Runner-Up at the IEEE/WIC/ACM WI-IAT 2021 international conference.",
 			},
 			{
 				icon: "school",
-				category: "CodeLabs 2020",
-				title: "Intern Mentor",
+				category: "Engineering Leadership",
+				title: "CodeLabs 2020 Intern Mentor",
 				description:
-					"Mentored three interns, fostering skill development and open-source project contributions.",
+					"Guided three software engineering interns through their first open-source platform contributions, fostering technical skill development and collaborative workflows.",
 			},
 		],
 	},
