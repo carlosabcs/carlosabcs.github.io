@@ -80,13 +80,14 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 				>
 					{navbarContent.experience}
 				</a>
-				<a
+				{/* Hidden for v1
+				 <a
 					href="#lab"
 					onClick={(e) => handleScroll(e, "lab")}
 					className={desktopLinkClass}
 				>
 					{navbarContent.lab}
-				</a>
+				</a> */}
 				<a
 					href="#publications"
 					onClick={(e) => handleScroll(e, "publications")}
