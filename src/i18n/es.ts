@@ -20,7 +20,7 @@ export const es: PortfolioData = {
 		description:
 			"Senior Full-Stack Engineer con más de 6 años de experiencia. Especializado en React, Svelte y TypeScript, con una sólida base en backend. Construyo sistemas resilientes de extremo a extremo que escalan sin esfuerzo, transformando requerimientos complejos en soluciones robustas y altamente accesibles.",
 		cvButton: "Descargar CV",
-		cvLink: "/Resume_Carlos_Cordova.pdf",
+		cvLink: "/resume_carlos_cordova.pdf",
 		labButton: "Ver Laboratorio Técnico",
 	},
 	meta: {
