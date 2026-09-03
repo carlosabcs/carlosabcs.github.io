@@ -48,5 +48,17 @@ const { publicationsContent } = Astro.props;
         </div>
       ))}
     </div>
+
+    <div class="mt-10">
+      <a
+        href={publicationsContent.viewAllUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-widest leading-none text-primary border-b border-transparent hover:border-primary transition-colors"
+      >
+        {publicationsContent.viewAllText}
+        <span class="material-symbols-outlined text-[0.6875rem] leading-none">open_in_new</span>
+      </a>
+    </div>
   </div>
 </section>

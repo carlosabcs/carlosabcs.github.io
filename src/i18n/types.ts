@@ -91,6 +91,8 @@ export interface PortfolioData {
 	publications: {
 		sectionTitle: string;
 		header: string;
+		viewAllText: string;
+		viewAllUrl: string;
 		items: Publication[];
 	};
 	community: {

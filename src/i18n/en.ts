@@ -4,7 +4,7 @@ export const en: PortfolioData = {
 	nav: {
 		carlosCordova: "Carlos Cordova",
 		acronym: "C.C. //",
-		positionTitle: "Software Engineer",
+		positionTitle: "Senior Software Engineer",
 		experience: "Experience",
 		toolkit: "Toolkit",
 		lab: "Lab",
@@ -161,14 +161,7 @@ export const en: PortfolioData = {
 		blocks: [
 			{
 				label: "Languages",
-				items: [
-					"TypeScript",
-					"JavaScript",
-					"Go",
-					"Python",
-					"PHP",
-					"SQL",
-				],
+				items: ["TypeScript", "JavaScript", "Go", "Python", "PHP", "SQL"],
 			},
 			{
 				label: "Frontend",
@@ -228,7 +221,9 @@ export const en: PortfolioData = {
 	},
 	publications: {
 		sectionTitle: "Research & Theory",
-		header: "Academic Publications",
+		header: "Selected Publications",
+		viewAllText: "View all publications on Google Scholar",
+		viewAllUrl: "https://scholar.google.com/citations?user=4GXga7AAAAAJ",
 		items: [
 			{
 				conference: "Knowledge and Information Systems",
@@ -236,7 +231,7 @@ export const en: PortfolioData = {
 				title:
 					"Understanding stance classification of BERT models: an attention-based framework",
 				description:
-					"An attention-based interpretability framework to identify the most influential words for stance classification using BERT-based models, assessing performance across multiple datasets and languages.",
+					"Research on interpreting BERT-based stance classification through attention mechanisms across datasets and languages.",
 				linkText: "Read paper",
 				url: "https://link.springer.com/article/10.1007/s10115-023-01962-y",
 			},
@@ -246,19 +241,9 @@ export const en: PortfolioData = {
 				title:
 					"Analysis of the influence of political polarization in the vaccination stance: the Brazilian COVID-19 scenario",
 				description:
-					"Research leveraging advanced data mining to analyze political polarization and its effect on vaccination behaviors during the pandemic using social media data.",
+					"Analysis of political polarization and vaccination stance using large-scale social media data.",
 				linkText: "Read paper",
 				url: "https://ojs.aaai.org/index.php/ICWSM/article/view/19281",
-			},
-			{
-				conference: "Simpósio Brasileiro de Banco de Dados (SBBD)",
-				year: "2021",
-				title:
-					"Interpreting BERT-based stance classification: a case study about the Brazilian COVID vaccination",
-				description:
-					"An interpretability study focusing on Natural Language Processing and Transformer models applied to public health stance classification.",
-				linkText: "Read paper",
-				url: "https://sol.sbc.org.br/index.php/sbbd/article/view/17867",
 			},
 			{
 				conference: "Journal of Information and Data Management",
@@ -266,53 +251,43 @@ export const en: PortfolioData = {
 				title:
 					"Assessing the combination of DistilBERT news representations and difusion topological features to classify fake news",
 				description:
-					"A novel approach combining compact language models (DistilBERT) with network topology features for enhanced fake news detection on social media.",
+					"Combined language-model representations and network topology features for fake news detection.",
 				linkText: "Read paper",
 				url: "https://journals-sol.sbc.org.br/index.php/jidm/article/view/1895",
-			},
-			{
-				conference: "IEEE/WIC/ACM WI-IAT",
-				year: "2020",
-				title:
-					"Quarenteners vs. Chloroquiners: A framework to analyze how political polarization affects the behavior of groups",
-				description:
-					"A computational framework designed to measure the impact of political extremes on social distancing compliance using large-scale social data.",
-				linkText: "Read paper",
-				url: "https://ieeexplore.ieee.org/abstract/document/9457781",
 			},
 		],
 	},
 	community: {
-		sectionTitle: "Stewardship",
-		header: "Community & Leadership",
+		sectionTitle: "Open Source & Technical Leadership",
+		header: "Beyond Professional Experience",
 		items: [
 			{
 				icon: "diversity_3",
 				category: "Open Source Mentorship",
-				title: "Google Summer of Code (3x)",
+				title: "Google Summer of Code Mentor",
 				description:
-					"Mentored three different interns for omegaUp across three consecutive years (2022-2024), achieving 100% project completion and facilitating two full-time engineering hires for the organization.",
+					"Mentored contributors across four GSoC cycles (2022, 2023, 2024, and 2026), supporting projects in plagiarism detection, mobile optimization, frontend modernization, and database performance optimization.",
 			},
 			{
 				icon: "military_tech",
 				category: "University Honors",
-				title: "Best Student Award, Class of 2018",
+				title: "Best Student, Class of 2018",
 				description:
-					"Graduated first in the Computer Science (Informática) class of 2018 at the National University of Trujillo, demonstrating consistent academic excellence and technical mastery.",
+					"Graduated as the Best Student of the Computer Science class of 2018 at the National University of Trujillo.",
 			},
 			{
 				icon: "workspace_premium",
 				category: "Academic Excellence",
 				title: "Award-Winning Research",
 				description:
-					"Received the Best Paper Award at the KDMiLe Symposium 2020 and the Best Student Paper Runner-Up at the IEEE/WIC/ACM WI-IAT 2021 international conference.",
+					"Received the Best Paper Award at the KDMiLe Symposium 2020 and Best Student Paper Runner-Up at the IEEE/WIC/ACM WI-IAT 2021 international conference.",
 			},
 			{
 				icon: "school",
 				category: "Engineering Leadership",
 				title: "CodeLabs 2020 Intern Mentor",
 				description:
-					"Guided three software engineering interns through their first open-source platform contributions, fostering technical skill development and collaborative workflows.",
+					"Mentored three software engineering interns through their first open-source contributions at omegaUp, supporting technical growth and collaborative development practices.",
 			},
 		],
 	},
