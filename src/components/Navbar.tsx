@@ -1,14 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
-import { SupportedLangs, type PortfolioData } from "../i18n/types";
+import type { PortfolioData } from "../i18n/types";
 
 interface NavbarProps {
-	lang: SupportedLangs;
 	navbarContent: PortfolioData["nav"];
 }
 
-export default function Navbar({ lang, navbarContent }: NavbarProps) {
+export default function Navbar({ navbarContent }: NavbarProps) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isConnectOpen, setIsConnectOpen] = useState(false);
 	const connectMenuRef = useRef<HTMLDivElement>(null);
@@ -105,22 +104,6 @@ export default function Navbar({ lang, navbarContent }: NavbarProps) {
 			</div>
 
 			<div className="flex items-center gap-4 md:gap-6">
-				<div className="flex items-center gap-2 font-sans tracking-widest text-[0.625rem] font-bold uppercase">
-					<a
-						href="/"
-						className={`transition-colors duration-300 hover:text-primary ${lang === SupportedLangs.EN ? "text-primary" : "text-outline"}`}
-					>
-						EN
-					</a>
-					<span className="text-outline-variant/50">/</span>
-					<a
-						href="/es/"
-						className={`transition-colors duration-300 hover:text-primary ${lang === SupportedLangs.ES ? "text-primary" : "text-outline"}`}
-					>
-						ES
-					</a>
-				</div>
-
 				<ThemeToggle />
 
 				<div className="hidden md:block relative" ref={connectMenuRef}>

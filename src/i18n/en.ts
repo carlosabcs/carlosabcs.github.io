@@ -15,16 +15,17 @@ export const en: PortfolioData = {
 	},
 	hero: {
 		location: "BASED IN PERU / REMOTE",
-		title1: "Architecting web solutions",
-		title2: "with uncompromising precision.",
+		title1: "Senior Software Engineer",
+		title2:
+			"Building software systems with a strong focus on frontend architecture.",
 		description:
-			"Senior Full-Stack Engineer with 6+ years of experience. Specialized in React, Svelte, and TypeScript, backed by solid server-side expertise. I engineer resilient, end-to-end systems that scale effortlessly—transforming complex requirements into robust, highly accessible solutions.",
+			"8+ years of experience across TypeScript, React, Svelte, Go, backend services, APIs, and cloud environments. I enjoy solving complex technical problems, taking ownership end-to-end, and turning evolving requirements into maintainable software.",
 		cvButton: "Download CV",
 		cvLink: "/resume_carlos_cordova.pdf",
 		labButton: "View Technical Lab",
 	},
 	meta: {
-		title: "Carlos Cordova - Software Engineer",
+		title: "Carlos Cordova - Senior Software Engineer",
 	},
 	footer: {
 		logo: "Carlos Cordova",
@@ -37,31 +38,88 @@ export const en: PortfolioData = {
 	experience: {
 		sectionTitle: "Professional Trajectory",
 		header: "Engineering Experience",
+		highlightsLabel: "Highlights",
+		techLabel: "Tech",
+		metricsLabel: "Metrics",
 		roles: [
 			{
-				title: "Frontend Web Developer",
-				company: "Globant (Qiddiya)",
-				period: "05/2024 — 03/2026",
-				companyUrl: "https://omegaup.com/",
+				title: "Senior Software Engineer",
+				company: "Globant (Verily)",
+				period: "04/2026 — Present",
+				companyUrl: "https://verily.com/",
 				description:
-					"Built and optimized UI features using SvelteKit and TypeScript. Translated Figma prototypes into a design system with over 60 reusable components, strictly following WCAG 2.1 AA accessibility guidelines. Integrated both REST and GraphQL endpoints and developed a dual-calendar (Hijri/Gregorian) for international audiences. Handled state management and fluid UI animations using Lottie.",
-				tech: ["Svelte", "SvelteKit", "TypeScript", "GraphQL", "Vitest"],
+					"Working primarily with Go and React within Verily's healthcare technology ecosystem, contributing to platforms, studies, workflows, content, consent management, and clinical data-related systems.",
+				highlights: [
+					"Rapidly adapted to complex internal platforms and workflows across Orion and Lifelong.",
+					"Contributed to the Bausch + Lomb Dry Eye Disease Study across Go-based services and React applications, configuring and integrating a bundle containing ~10 workflows and 20+ content resources across development and test environments.",
+					"Created technical documentation and playbooks to capture system knowledge and simplify recurring operational workflows.",
+					"Developing reusable AI-assisted workflows and skills to simplify configuration, validation, testing, and knowledge-navigation tasks.",
+				],
+				tech: [
+					"Go",
+					"React",
+					"TypeScript",
+					"REST APIs",
+					"Healthcare Technology",
+					"AI-Assisted Development",
+				],
+				metrics: [],
+			},
+			{
+				title: "Senior Web UI Developer",
+				company: "Globant (Qiddiya)",
+				period: "05/2024 — 04/2026",
+				companyUrl: "https://qiddiya.com/",
+				description:
+					"Worked on Qiddiya's digital ticketing platform, delivering complex purchase and payment experiences for Aquarabia and Six Flags.",
+				highlights: [
+					"Owned the frontend integration of HyperPay end-to-end, from technical investigation and proof of concept through production, implementing a customized payment form, validation logic, loading states, error handling, and checkout payment states.",
+					"Built the complete Experiences purchase flow, including experience selection, ticket types, participant quantities, extras, cart, confirmation, payment, checkout, and localStorage state persistence.",
+					"Developed the complete VIP Pass purchase experience, including ticket restrictions, purchase limits, accommodation options, checkout, and payment.",
+					"Developed and optimized key features using SvelteKit and TypeScript while maintaining accessibility scores of 95+.",
+					"Built 40+ reusable WCAG 2.1 AA-compliant components from Figma and integrated GraphQL APIs.",
+					"Implemented internationalized workflows supporting English/Arabic, multiple currencies, and Hijri/Gregorian calendars while collaborating across ~8 specialized teams.",
+					"Identified and resolved 50+ defects through systematic debugging and Vitest testing.",
+				],
+				tech: [
+					"SvelteKit",
+					"Svelte",
+					"TypeScript",
+					"GraphQL",
+					"Tailwind CSS",
+					"Vitest",
+					"Web Accessibility",
+					"Internationalization",
+				],
 				metrics: [
-					{ value: "≥95", label: "A11Y Score" },
-					{ value: "60+", label: "UI Components" },
+					{ value: "95+", label: "A11Y Score" },
+					{ value: "40+", label: "WCAG Components" },
 				],
 			},
 			{
 				title: "Full Stack Software Engineer",
 				company: "Globant (Google PSO)",
-				companyUrl: "https://omegaup.com/",
 				period: "02/2022 — 04/2024",
+				companyUrl: "https://www.google.com/",
 				description:
-					"Maintained and evolved the PSO Launchpad platform using React and TypeScript. Built backend modules in Express.js for resource estimation and opportunity recommendation. Implemented an on-demand data sync feature that cut manual updates in half. Configured CI/CD pipelines via GCP to optimize the release process.",
-				tech: ["React", "Express.js", "GCP", "TypeScript"],
+					"Worked on PSO Launchpad, an internal platform supporting Google engagement teams, contributing across frontend architecture, backend services, data synchronization, and product improvements.",
+				highlights: [
+					"Improved PSO Launchpad provisioning scalability by 4×, reducing new Launchpad configuration from 1 day to 2 hours through frontend architecture and workflow improvements using React and TypeScript.",
+					"Implemented opportunity recommendation and resource estimation modules with Express.js.",
+					"Developed on-demand synchronization for real-time data retrieval, reducing manual updates by 50%.",
+					"Led product demos for 50+ Google engagement managers, gathering feedback that informed UI/UX improvements.",
+				],
+				tech: [
+					"React",
+					"TypeScript",
+					"Express.js",
+					"GCP",
+					"REST APIs",
+					"Software Architecture",
+				],
 				metrics: [
-					{ value: "8 min", label: "Deploy Time" },
-					{ value: "50%", label: "Less Manual Syncs" },
+					{ value: "4×", label: "Provisioning Capacity" },
+					{ value: "50%", label: "Less Manual Updates" },
 				],
 			},
 			{
@@ -70,24 +128,29 @@ export const en: PortfolioData = {
 				companyUrl: "https://omegaup.com/",
 				period: "06/2019 — 01/2022",
 				description:
-					"Architected the Notification and Badge systems for the open-source competitive programming platform. Wrote the School Ranking algorithm and set up automated cronjobs for daily data aggregation. Collaborated on technical design documents to scope large-scale enhancements for a massive user base.",
-				tech: ["Vue.js", "Python", "PHP", "Docker", "TypeScript", "MySQL"],
-				metrics: [
-					{ value: "200k+", label: "Yearly Users" },
-					{ value: "8+", label: "Own Projects" },
+					"Worked on an open-source competitive programming platform serving 200K+ yearly users, contributing across product features, backend systems, technical design, and developer collaboration.",
+				highlights: [
+					"Designed and maintained Badge and Notification Systems using Vue.js, TypeScript, Python, and PHP for a platform serving 200K+ yearly active users.",
+					"Built automated recognition features including Coder of the Month and School of the Month.",
+					"Authored and reviewed technical design documents and collaborated with contributors to scope 5 major product enhancements.",
+					"Mentored 3 software engineering interns through CodeLabs 2020.",
 				],
+				tech: ["Vue.js", "TypeScript", "Python", "PHP", "Docker", "MySQL"],
+				metrics: [{ value: "200K+", label: "Yearly Active Users" }],
 			},
 			{
 				title: "Full Stack Software Engineer",
 				company: "Tera Soluciones Digitales",
 				period: "08/2018 — 05/2019",
 				description:
-					"Developed 'Urbano', a real-time public transit tracking application. Set up TCP communication with GPS hardware using Node.js and managed data streams with Express and MongoDB. Also built a warehouse management dashboard ('Sysfarma') using Laravel and Vue.js.",
-				tech: ["Node.js", "MongoDB", "Vue.js", "Laravel"],
-				metrics: [
-					{ value: "100+", label: "Concurrent Users" },
-					{ value: "2", label: "Products Launched" },
+					"Built web applications and real-time systems for transportation and warehouse management, working directly with clients from requirements through implementation.",
+				highlights: [
+					"Built a real-time public transit tracking system using Node.js, TCP, Express, and MongoDB, supporting 100+ concurrent users.",
+					"Developed a warehouse management application using Vue.js and Laravel.",
+					"Led requirements workshops and collaborated directly with clients to translate business needs into technical solutions.",
 				],
+				tech: ["Node.js", "Express.js", "MongoDB", "Vue.js", "Laravel"],
+				metrics: [{ value: "100+", label: "Concurrent Users" }],
 			},
 		],
 	},

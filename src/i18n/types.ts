@@ -1,8 +1,3 @@
-export enum SupportedLangs {
-	ES = "es",
-	EN = "en",
-}
-
 export interface Metric {
 	value: string;
 	label: string;
@@ -14,6 +9,7 @@ export interface ExperienceRole {
 	companyUrl?: string;
 	period: string;
 	description: string;
+	highlights: string[];
 	tech: string[];
 	metrics: Metric[];
 }
@@ -71,6 +67,9 @@ export interface PortfolioData {
 	experience: {
 		sectionTitle: string;
 		header: string;
+		highlightsLabel: string;
+		techLabel: string;
+		metricsLabel: string;
 		roles: ExperienceRole[];
 	};
 	lab: {

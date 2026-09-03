@@ -11,9 +11,6 @@ const { experienceContent } = Astro.props;
 <section class="py-32 px-6 md:px-12 bg-surface-container-low" id="experience">
   <div class="max-w-6xl mx-auto">
     <div class="mb-20">
-      <h2 class="text-[0.6875rem] uppercase tracking-[0.3em] font-bold text-primary mb-4">
-        {experienceContent.sectionTitle}
-      </h2>
       <h3 class="text-3xl font-bold font-headline text-on-surface">
         {experienceContent.header}
       </h3>
@@ -24,59 +21,70 @@ const { experienceContent } = Astro.props;
         <div class="relative pl-6 md:pl-12 group">
           <div class={`absolute -left-1.25 top-0 w-2.5 h-2.5 transition-colors duration-300 ${index === 0 ? 'bg-primary' : 'bg-outline group-hover:bg-primary/70'}`}></div>
           
-          <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 gap-4">
-            <div>
-              <h4 class="text-2xl font-bold text-on-surface flex flex-wrap items-center gap-2">
-                <span>{role.title}</span>
-                <span class="text-outline font-light">@</span>
-                {role.companyUrl ? (
-                  <a 
-                    href={role.companyUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="text-primary hover:text-primary-container hover:underline underline-offset-4 decoration-1 transition-all"
-                  >
-                    {role.company}
-                  </a>
-                ) : (
-                  <span class="text-primary">{role.company}</span>
-                )}
+          <div class="mb-8 space-y-2">
+              <h4 class="text-2xl font-bold text-on-surface">
+                {role.title}
               </h4>
+              {role.companyUrl ? (
+                <a
+                  href={role.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary hover:text-primary-container hover:underline underline-offset-4 decoration-1 transition-all text-lg"
+                >
+                  {role.company}
+                </a>
+              ) : (
+                <span class="text-primary text-lg">{role.company}</span>
+              )}
+              <div>
+                <span class="inline-block px-3 py-1.5 bg-surface-container-highest border border-outline-variant/30 text-[0.6875rem] uppercase font-mono text-on-surface tracking-widest font-bold">
+                  {role.period}
+                </span>
+              </div>
             </div>
-            
-            {/* Emphasized Date Badge */}
-            <div class="shrink-0 mt-1 md:mt-0">
-              <span class="inline-block px-3 py-1.5 bg-surface-container-highest border border-outline-variant/30 text-[0.6875rem] uppercase font-mono text-on-surface tracking-widest font-bold">
-                {role.period}
-              </span>
-            </div>
-          </div>
 
-          <div class="grid md:grid-cols-3 gap-12 mt-6">
-            <div class="md:col-span-2 space-y-6">
+          <div class="space-y-6">
               <p class="text-on-surface-variant leading-relaxed">
                 {role.description}
               </p>
-              <ul class="flex flex-wrap gap-2">
-                {role.tech.map((tech) => (
-                  <li class="px-3 py-1 bg-surface-container-high text-[0.625rem] font-bold uppercase tracking-widest border border-outline-variant/20 text-on-surface">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div class="grid grid-cols-2 items-center gap-4">
-              {role.metrics.map((metric) => (
-                <div class="p-6 bg-surface-container-high/50 border-l border-primary/50 hover:border-primary transition-colors">
-                  <div class="text-2xl font-bold text-primary mb-1">{metric.value}</div>
-                  <div class="text-[0.625rem] uppercase tracking-tighter text-outline">
-                    {metric.label}
-                  </div>
+              {role.highlights.length ? (
+                <div class="space-y-2">
+                  <span class="block font-mono text-[0.6875rem] uppercase tracking-widest font-bold text-outline">
+                    {experienceContent.highlightsLabel}
+                  </span>
+                  <ul class="list-disc pl-5 space-y-2 marker:text-primary">
+                    {role.highlights.map((highlight) => (
+                      <li class="text-on-surface-variant leading-relaxed">{highlight}</li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
+              ) : null}
+              <div class="space-y-2">
+                <span class="block font-mono text-[0.6875rem] uppercase tracking-widest font-bold text-outline">
+                  {experienceContent.techLabel}
+                </span>
+                <p class="text-on-surface-variant leading-relaxed">
+                  {role.tech.join(" · ")}
+                </p>
+              </div>
+              {role.metrics.length ? (
+                <div class="space-y-2">
+                  <span class="block font-mono text-[0.6875rem] uppercase tracking-widest font-bold text-outline">
+                    {experienceContent.metricsLabel}
+                  </span>
+                  <p class="leading-relaxed">
+                    {role.metrics.map((metric, index) => (
+                      <span>
+                        {index > 0 && <span class="text-outline"> · </span>}
+                        <span class="font-bold text-primary">{metric.value}</span>
+                        <span class="text-on-surface-variant"> {metric.label}</span>
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              ) : null}
             </div>
-          </div>
         </div>
       ))}
     </div>

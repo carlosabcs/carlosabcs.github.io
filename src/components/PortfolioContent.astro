@@ -5,19 +5,13 @@ import Experience from './Experience.astro';
 // import Lab from './Lab.astro';
 import Publications from './Publications.astro';
 import Community from './Community.astro';
-import { getI18n } from '../i18n/utils';
-import type { SupportedLangs } from '../i18n/types';
+import { en } from '../i18n/en';
 
-interface Props {
-  lang: SupportedLangs;
-}
-
-const { lang } = Astro.props;
-const content = getI18n(lang);
+const content = en;
 ---
 
-<Layout title={content.meta.title} lang={lang}>
-  <Navbar client:load lang={lang} navbarContent={content.nav} />
+<Layout title={content.meta.title}>
+  <Navbar client:load navbarContent={content.nav} />
 
   <main class="min-h-screen flex items-center px-6 md:px-12 pt-24 pb-16 w-full max-w-[100vw]">
     <div class="max-w-5xl">
