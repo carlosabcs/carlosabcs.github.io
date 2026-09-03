@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from './Navbar';
 import Experience from './Experience.astro';
+import Toolkit from './Toolkit.astro';
 // import Lab from './Lab.astro';
 import Publications from './Publications.astro';
 import Community from './Community.astro';
@@ -49,6 +50,7 @@ const content = en;
   </main>
 
   <Experience experienceContent={content.experience} />
+  <Toolkit toolkitContent={content.toolkit} />
   {/* <Lab labContent={content.lab} /> */}
   <Publications publicationsContent={content.publications} />
   <Community communityContent={content.community} />

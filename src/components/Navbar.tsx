@@ -79,6 +79,13 @@ export default function Navbar({ navbarContent }: NavbarProps) {
 				>
 					{navbarContent.experience}
 				</a>
+				<a
+					href="#toolkit"
+					onClick={(e) => handleScroll(e, "toolkit")}
+					className={desktopLinkClass}
+				>
+					{navbarContent.toolkit}
+				</a>
 				{/* Hidden for v1
 				 <a
 					href="#lab"
@@ -180,6 +187,13 @@ export default function Navbar({ navbarContent }: NavbarProps) {
 							className="font-sans tracking-widest text-xs uppercase font-bold text-outline hover:text-primary transition-colors duration-300"
 						>
 							{navbarContent.experience}
+						</a>
+						<a
+							href="#toolkit"
+							onClick={(e) => handleScroll(e, "toolkit")}
+							className="font-sans tracking-widest text-xs uppercase font-bold text-outline hover:text-primary transition-colors duration-300"
+						>
+							{navbarContent.toolkit}
 						</a>
 						{/* Hidden for v1
 						<a

@@ -14,6 +14,11 @@ export interface ExperienceRole {
 	metrics: Metric[];
 }
 
+export interface ToolkitBlock {
+	label: string;
+	items: string[];
+}
+
 export interface LabItem {
 	icon: string;
 	version: string;
@@ -48,6 +53,7 @@ export interface PortfolioData {
 		acronym: string;
 		positionTitle: string;
 		experience: string;
+		toolkit: string;
 		lab: string;
 		publications: string;
 		community: string;
@@ -71,6 +77,11 @@ export interface PortfolioData {
 		techLabel: string;
 		metricsLabel: string;
 		roles: ExperienceRole[];
+	};
+	toolkit: {
+		sectionTitle: string;
+		header: string;
+		blocks: ToolkitBlock[];
 	};
 	lab: {
 		sectionTitle: string;
